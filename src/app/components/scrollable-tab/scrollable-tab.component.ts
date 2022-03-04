@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
-interface TopMenu {
+export interface TopMenu {
   title: string;
   link?: string;
 }
+
 interface AddFunc {
   (x: number, y: number): number;
 }
@@ -16,22 +17,12 @@ interface AddFunc {
 export class ScrollableTabComponent implements OnInit {
   selectedIndex = -1;
   title = 'Mobile Mall';
-  menus: TopMenu[] = [
-    { title: 'Hot', link: '' },
-    { title: 'Man Cloth', link: '' },
-    { title: 'SuperMarket', link: '' },
-    { title: 'Sport', link: '' },
-    { title: 'Cell Phone', link: '' },
-    { title: 'Beds', link: '' },
-    { title: 'Food', link: '' },
-    { title: 'Electric', link: '' },
-    { title: 'Shoes Bag', link: '' },
-    { title: 'Car', link: '' },
-    { title: 'Friute', link: '' },
-    { title: 'Laptop', link: '' },
-    { title: 'Baby', link: '' },
-  ];
-
+  @Input() menus: TopMenu[] = [];
+  @Input() backgroundColor: string = 'white';
+  @Input() titleActiveColor: string = 'yellow';
+  @Input() titleColor: string = 'blue';
+  @Input() indicatorColor: string = 'brown';
+  @Output() tabSelected = new EventEmitter();
   constructor() {}
 
   ngOnInit(): void {}
@@ -40,5 +31,6 @@ export class ScrollableTabComponent implements OnInit {
 
   handleSelection(index: number) {
     this.selectedIndex = index;
+    this.tabSelected.emit(this.menus[this.selectedIndex]);
   }
 }

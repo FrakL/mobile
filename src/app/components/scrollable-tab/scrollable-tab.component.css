@@ -1,12 +1,17 @@
 ul {
   padding: 0;
   margin: 0;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
   display: flex;
   flex-direction: row;
 }
 
 ul li {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 5px;
   white-space: nowrap;
 }
@@ -21,4 +26,11 @@ a {
 
 .active {
   color: red;
+}
+
+.indicator {
+  background-color: brown;
+  height: 2px;
+  width: 2rem;
+  margin-top: 2px;
 }
