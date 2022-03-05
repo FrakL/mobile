@@ -1,0 +1,13 @@
+<!-- <input type="text" [value]="username" (input)="setUsername($event)" />
+<span>hello {{username}}</span> -->
+
+<!-- <input type="text" [(ngModel)]="username" />
+<span>hello {{username}}</span> -->
+
+<!-- <input type="text" [value]="username" />
+<span (click)="handleClick()">hello {{username}}</span>
+{{result}} -->
+<div appGridItem *ngFor="let channel of channels">
+  <img [src]="channel.icon" alt="" [appGridItemImg]="'4rem'" [fitMode]="'none'">
+  <span appGridItemTitle>{{channel.title}}</span>
+</div>
