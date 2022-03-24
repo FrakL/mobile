@@ -5,21 +5,25 @@ import {
   ScrollableTabComponent,
   ImageSliderComponent,
   HorizontalGridComponent,
+  CountDownComponent,
 } from './components/';
 import {
   GridItemDirective,
   GridItemImgDirective,
   GridItemTitleDirective,
 } from './directives';
+import { AgoPipe } from './pipe';
 
 @NgModule({
   declarations: [
     ScrollableTabComponent,
     ImageSliderComponent,
     HorizontalGridComponent,
+    CountDownComponent,
     GridItemDirective,
     GridItemImgDirective,
     GridItemTitleDirective,
+    AgoPipe,
   ],
   imports: [CommonModule, FormsModule],
   exports: [
@@ -28,9 +32,11 @@ import {
     ScrollableTabComponent,
     ImageSliderComponent,
     HorizontalGridComponent,
+    CountDownComponent,
     GridItemDirective,
     GridItemImgDirective,
     GridItemTitleDirective,
+    AgoPipe,
   ],
 })
 export class SharedModule {}

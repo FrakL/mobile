@@ -3,20 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { HorizontalGridComponent } from './horizontal-grid.component';
+import { CountDownComponent } from './count-down.component';
 
-describe('HorizontalGridComponent', () => {
-  let component: HorizontalGridComponent;
-  let fixture: ComponentFixture<HorizontalGridComponent>;
+describe('CountDownComponent', () => {
+  let component: CountDownComponent;
+  let fixture: ComponentFixture<CountDownComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HorizontalGridComponent],
-    }).compileComponents();
+      declarations: [ CountDownComponent ]
+    })
+    .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HorizontalGridComponent);
+    fixture = TestBed.createComponent(CountDownComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

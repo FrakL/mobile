@@ -3,20 +3,21 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { HorizontalGridComponent } from './horizontal-grid.component';
+import { HomeGrandComponent } from './home-grand.component';
 
-describe('HorizontalGridComponent', () => {
-  let component: HorizontalGridComponent;
-  let fixture: ComponentFixture<HorizontalGridComponent>;
+describe('HomeGrandComponent', () => {
+  let component: HomeGrandComponent;
+  let fixture: ComponentFixture<HomeGrandComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [HorizontalGridComponent],
-    }).compileComponents();
+      declarations: [ HomeGrandComponent ]
+    })
+    .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HorizontalGridComponent);
+    fixture = TestBed.createComponent(HomeGrandComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
